@@ -24,7 +24,6 @@ const AskQuestion = () => {
     const postQuestion = async (e) => {
         e.preventDefault();
         let name = getUser();
-        debugger
         let response = await callAPI("https://developer-forum-server.herokuapp.com/question/new", { token : cookies.user.token, ...question, askedBy : name }, 'POST');
         if(response.status === 200){
             alert('Query Posted')
