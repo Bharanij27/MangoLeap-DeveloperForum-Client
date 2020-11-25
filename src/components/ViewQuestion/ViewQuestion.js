@@ -26,7 +26,7 @@ const ViewQuestion = () => {
     useEffect(()=>{
         let questionId = getQuestionId();
         const fetchQuestion = async () => {
-            let response = await callAPI(`http://localhost:3030/question/${questionId}`, {
+            let response = await callAPI(`https://developer-forum-server.herokuapp.com/question/${questionId}`, {
                 token : cookies.user.token
             }, 'POST');
             if(response.status === 200){
@@ -44,7 +44,7 @@ const ViewQuestion = () => {
     const submitAnswer = async (newAnswer) => {
         setIsLoading(true);
         let by = getUser();
-        let response = await callAPI('http://localhost:3030/question/submitAnswer', {
+        let response = await callAPI('https://developer-forum-server.herokuapp.com/question/submitAnswer', {
             token : cookies.user.token, 
             questionId : question._id,
             answer : newAnswer,
@@ -58,7 +58,7 @@ const ViewQuestion = () => {
 
     const acceptAnswer = async (answerId) => {
         setIsLoading(true);
-        let response = await callAPI('http://localhost:3030/question/acceptAnswer', {
+        let response = await callAPI('https://developer-forum-server.herokuapp.com/question/acceptAnswer', {
             token : cookies.user.token, 
             questionId : question._id,
             answerId,
@@ -76,7 +76,7 @@ const ViewQuestion = () => {
     const commentQuestion = async (comment) => {
         setIsLoading(true);
         let askedBy = getUser();
-        let response = await callAPI(`http://localhost:3030/question/comment/${question._id}`, {
+        let response = await callAPI(`https://developer-forum-server.herokuapp.com/question/comment/${question._id}`, {
             token : cookies.user.token,
             content : comment,
             askedBy, 
@@ -91,7 +91,7 @@ const ViewQuestion = () => {
     const submitAnswerComment = async (answerId, content) => {
         setIsLoading(true);
         let askedBy = getUser();
-        let response = await callAPI(`http://localhost:3030/question/commentAnswer/${question._id}`, {
+        let response = await callAPI(`https://developer-forum-server.herokuapp.com/question/commentAnswer/${question._id}`, {
             token : cookies.user.token,
             answerId,
             content,

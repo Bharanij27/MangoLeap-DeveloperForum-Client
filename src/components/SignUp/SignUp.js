@@ -23,7 +23,7 @@ const SignUp = ({ title, setIsLogin }) => {
             else if(formData.pass.length < 4){
                 alert('The password should be a minimum of 4 characters in length')
             }
-            let response = await callAPI("http://localhost:3030/newUser", {...formData,}, 'POST');
+            let response = await callAPI("https://developer-forum-server.herokuapp.com/newUser", {...formData,}, 'POST');
             console.log(response);
             if (response.status === 200) {
                 setIsLogin(true);

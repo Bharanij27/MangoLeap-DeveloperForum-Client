@@ -22,7 +22,7 @@ const Forum = () => {
         setIsLoading(true);
         
         const getQuestions = async () => {
-            let response = await callAPI('http://localhost:3030/question/', {token : cookies.user.token}, 'POST');
+            let response = await callAPI('https://developer-forum-server.herokuapp.com/question/', {token : cookies.user.token}, 'POST');
             if(response.status === 200) {
                 setQuestions(response.questions);
                 setAllQuestions(response.questions)

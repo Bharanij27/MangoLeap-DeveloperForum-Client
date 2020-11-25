@@ -25,7 +25,7 @@ const Login = ({ title, setIsLogin }) => {
         e.preventDefault();
         setIsLoading(true);
         try {
-            let response = await callAPI("http://localhost:3030/", { ...formData }, 'POST');
+            let response = await callAPI("https://developer-forum-server.herokuapp.com/", { ...formData }, 'POST');
             if (response.status === 200) {
                 cookies && setCookie("user", { token: response.token }, { path: "/" });
                 setIsLoading(false);
