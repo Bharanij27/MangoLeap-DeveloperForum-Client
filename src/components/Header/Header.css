@@ -1,0 +1,13 @@
+.navr-bar{
+    background-color: #ff6600;
+}
+
+.navr-bar a{
+    color: #ffffff;
+    text-transform: uppercase ;
+}
+
+.f-right{
+    position: absolute;
+    right: 2%;
+}

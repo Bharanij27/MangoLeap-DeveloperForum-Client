@@ -1,0 +1,21 @@
+.forum-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+    background-color: var(--black-075);
+}
+
+.forum-container button{
+    border: 2px solid rgb(161, 154, 161);
+    margin-left: 20px;
+}
+
+.to-right{
+    position: absolute;
+    right: 20%;
+}

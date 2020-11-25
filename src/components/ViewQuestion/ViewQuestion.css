@@ -1,0 +1,29 @@
+.question-head h3{
+    display: inline;
+}
+
+.description{
+    font-size: medium;
+    margin-top: 10px;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+#comment, #answer{
+    width: 75%;
+}
+.comment-btn{
+    color: #848d95;
+    opacity: .6;
+    padding: 0 3px 2px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.comment-btn:hover{
+    opacity: 1;
+    color: blue !important;
+}
+
+.border-bottom-black{
+    border-bottom: 1px solid lightslategray;
+}

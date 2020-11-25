@@ -1,0 +1,13 @@
+.comment-section{
+    font-size: smaller;
+    border-top: 1px solid lightsteelblue;
+    width: 60%;
+}
+
+.comment-section:last-child{
+    border-bottom: 1px solid lightsteelblue;
+}
+
+.font-small{
+    font-size: small !important;
+}
