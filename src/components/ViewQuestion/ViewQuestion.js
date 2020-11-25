@@ -7,7 +7,8 @@ import AnswerConatiner from '../AnswerConatiner/AnswerConatiner';
 import CommentForm from '../CommentForm/CommentForm';
 import Header from '../Header/Header';
 import ShowComment from '../ShowComment/ShowComment';
-import './ViewQuestion.css'
+import Loading from '../Loading/Loading';
+import './ViewQuestion.css';
 
 const ViewQuestion = () => {
     const location = useLocation();
